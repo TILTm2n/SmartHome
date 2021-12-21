@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мой дом" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoh-LY-n3F">
+                                <rect key="frame" x="164.5" y="60" width="85.5" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="898-Xr-Jdl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" name="MainText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wxa-yG-EbG">
+                                <rect key="frame" x="0.0" y="106" width="414" height="44"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBL-Qs-gaq">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oh-9F-aKr">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="44"/>
+                                                <color key="tintColor" name="MainText"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Камеры">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="0oh-9F-aKr" secondAttribute="bottom" id="Q8O-Kg-yBg"/>
+                                            <constraint firstItem="0oh-9F-aKr" firstAttribute="leading" secondItem="JBL-Qs-gaq" secondAttribute="leading" id="aBJ-nx-wYb"/>
+                                            <constraint firstAttribute="height" constant="44" id="bbP-GQ-cu4"/>
+                                            <constraint firstItem="0oh-9F-aKr" firstAttribute="top" secondItem="JBL-Qs-gaq" secondAttribute="top" id="dvl-e4-Dve"/>
+                                            <constraint firstAttribute="trailing" secondItem="0oh-9F-aKr" secondAttribute="trailing" id="pZr-XK-YWc"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otZ-wr-UNp">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCk-zc-CjV">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="dGh-RA-OvP"/>
+                                                </constraints>
+                                                <color key="tintColor" name="MainText"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Двери">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="bCk-zc-CjV" firstAttribute="leading" secondItem="otZ-wr-UNp" secondAttribute="leading" id="BLc-EY-09u"/>
+                                            <constraint firstAttribute="trailing" secondItem="bCk-zc-CjV" secondAttribute="trailing" id="UTv-l1-aDa"/>
+                                            <constraint firstItem="bCk-zc-CjV" firstAttribute="top" secondItem="otZ-wr-UNp" secondAttribute="top" id="eOM-6e-2Ny"/>
+                                            <constraint firstAttribute="bottom" secondItem="bCk-zc-CjV" secondAttribute="bottom" id="w52-yf-ggB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wxa-yG-EbG" firstAttribute="top" secondItem="Uoh-LY-n3F" secondAttribute="bottom" constant="20" id="HFC-j7-311"/>
+                            <constraint firstItem="wxa-yG-EbG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aDK-t1-IP3"/>
+                            <constraint firstItem="Uoh-LY-n3F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fV2-MZ-DPx"/>
+                            <constraint firstItem="Uoh-LY-n3F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="gLZ-Du-qOu"/>
+                            <constraint firstAttribute="trailing" secondItem="wxa-yG-EbG" secondAttribute="trailing" id="wKQ-3Y-3KZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="66.964285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="MainText">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

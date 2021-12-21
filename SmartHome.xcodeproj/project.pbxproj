@@ -58,16 +58,40 @@
 		A38176A427722D27000FD87D /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
+				A38176BF27722E3D000FD87D /* Views */,
+				A38176BE27722E2F000FD87D /* Models */,
+				A38176BC27722E1B000FD87D /* Controllers */,
 				A38176A527722D27000FD87D /* AppDelegate.swift */,
 				A38176A727722D27000FD87D /* SceneDelegate.swift */,
-				A38176A927722D27000FD87D /* ViewController.swift */,
-				A38176AB27722D27000FD87D /* Main.storyboard */,
 				A38176B127722D28000FD87D /* Assets.xcassets */,
 				A38176B327722D28000FD87D /* LaunchScreen.storyboard */,
 				A38176B627722D28000FD87D /* Info.plist */,
 				A38176AE27722D27000FD87D /* SmartHome.xcdatamodeld */,
 			);
 			path = SmartHome;
+			sourceTree = "<group>";
+		};
+		A38176BC27722E1B000FD87D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A38176A927722D27000FD87D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A38176BE27722E2F000FD87D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A38176BF27722E3D000FD87D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A38176AB27722D27000FD87D /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
