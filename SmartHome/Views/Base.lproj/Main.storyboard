@@ -84,6 +84,10 @@
                             <constraint firstAttribute="trailing" secondItem="wxa-yG-EbG" secondAttribute="trailing" id="wKQ-3Y-3KZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CameraButton" destination="0oh-9F-aKr" id="J0L-CA-DCw"/>
+                        <outlet property="DoorsButton" destination="bCk-zc-CjV" id="uH7-zv-SH4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

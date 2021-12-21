@@ -14,6 +14,7 @@
 		A38176B027722D27000FD87D /* SmartHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A38176AE27722D27000FD87D /* SmartHome.xcdatamodeld */; };
 		A38176B227722D28000FD87D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A38176B127722D28000FD87D /* Assets.xcassets */; };
 		A38176B527722D28000FD87D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A38176B327722D28000FD87D /* LaunchScreen.storyboard */; };
+		A38176C1277256E5000FD87D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38176C0277256E5000FD87D /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A38176B127722D28000FD87D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A38176B427722D28000FD87D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A38176B627722D28000FD87D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A38176C0277256E5000FD87D /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				A38176B327722D28000FD87D /* LaunchScreen.storyboard */,
 				A38176B627722D28000FD87D /* Info.plist */,
 				A38176AE27722D27000FD87D /* SmartHome.xcdatamodeld */,
+				A38176C0277256E5000FD87D /* Button.swift */,
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38176C1277256E5000FD87D /* Button.swift in Sources */,
 				A38176AA27722D27000FD87D /* ViewController.swift in Sources */,
 				A38176A627722D27000FD87D /* AppDelegate.swift in Sources */,
 				A38176B027722D27000FD87D /* SmartHome.xcdatamodeld in Sources */,
