@@ -26,6 +26,8 @@ extension UIButton{
             case .Left: border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.size.height)
             case .Rigth: border.frame = CGRect(x: self.frame.size.width - width, y: 0, width: width, height: self.frame.size.height)
         }
+        
+        self.layer.addSublayer(border)
     }
     
     func removeBorder(){
