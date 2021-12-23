@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A346667C2773BC0000448E4F /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A346667B2773BC0000448E4F /* UI.swift */; };
 		A38176A627722D27000FD87D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38176A527722D27000FD87D /* AppDelegate.swift */; };
 		A38176A827722D27000FD87D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38176A727722D27000FD87D /* SceneDelegate.swift */; };
 		A38176AA27722D27000FD87D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38176A927722D27000FD87D /* ViewController.swift */; };
@@ -15,9 +16,11 @@
 		A38176B227722D28000FD87D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A38176B127722D28000FD87D /* Assets.xcassets */; };
 		A38176B527722D28000FD87D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A38176B327722D28000FD87D /* LaunchScreen.storyboard */; };
 		A38176C1277256E5000FD87D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38176C0277256E5000FD87D /* Button.swift */; };
+		A3C464A427750C7D00DA3713 /* FirstTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C464A327750C7D00DA3713 /* FirstTypeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A346667B2773BC0000448E4F /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		A38176A227722D27000FD87D /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38176A527722D27000FD87D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A38176A727722D27000FD87D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		A38176B427722D28000FD87D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A38176B627722D28000FD87D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A38176C0277256E5000FD87D /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		A3C464A327750C7D00DA3713 /* FirstTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTypeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 				A38176B627722D28000FD87D /* Info.plist */,
 				A38176AE27722D27000FD87D /* SmartHome.xcdatamodeld */,
 				A38176C0277256E5000FD87D /* Button.swift */,
+				A346667B2773BC0000448E4F /* UI.swift */,
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -78,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				A38176A927722D27000FD87D /* ViewController.swift */,
+				A3C464A327750C7D00DA3713 /* FirstTypeTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,9 +176,11 @@
 			files = (
 				A38176C1277256E5000FD87D /* Button.swift in Sources */,
 				A38176AA27722D27000FD87D /* ViewController.swift in Sources */,
+				A3C464A427750C7D00DA3713 /* FirstTypeTableViewCell.swift in Sources */,
 				A38176A627722D27000FD87D /* AppDelegate.swift in Sources */,
 				A38176B027722D27000FD87D /* SmartHome.xcdatamodeld in Sources */,
 				A38176A827722D27000FD87D /* SceneDelegate.swift in Sources */,
+				A346667C2773BC0000448E4F /* UI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
