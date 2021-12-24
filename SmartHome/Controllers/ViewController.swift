@@ -8,6 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var CameraButton: UIButton!
+    @IBOutlet weak var DoorsButton: UIButton!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -26,14 +29,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
-    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 20
-//    }
-    
-
-    @IBOutlet weak var CameraButton: UIButton!
-    @IBOutlet weak var DoorsButton: UIButton!
     
     var currentButton = 1
     
