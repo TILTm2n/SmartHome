@@ -12,6 +12,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var CameraButton: UIButton!
     @IBOutlet weak var DoorsButton: UIButton!
     
+    var camViews: [CameraView] = [
+        CameraView(cameraView: UIImage(named: "sunset")!, icon: UIImage(named: "sunset")!, title: "Title", detail: "detail")
+    ]
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -19,9 +23,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstTypeCell", for: indexPath) as! FirstTypeTableViewCell
         
-        cell.imageCamera.image = UIImage(named: "sunset")
-        cell.title.text = "pososi"
-        cell.detail.text = "пососи еще"
+        cell.imageCamera.image = camViews[indexPath.row].cameraView
+        cell.title.text = camViews[indexPath.row].title
+        cell.detail.text = camViews[indexPath.row].detail
+        cell.iconCamera.image = camViews[indexPath.row].icon
         
         return cell
     }
