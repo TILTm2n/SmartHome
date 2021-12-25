@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var mainCamerasTitle: UILabel!
     
     var camViews: [CameraView] = [
-        CameraView(cameraView: "", icon: "sunrise", title: "Title", detail: "detail"),
+        CameraView(cameraView: "", icon: "icon", title: "Title", detail: "detail"),
         CameraView(cameraView: "sunrise", icon: "", title: "Title", detail: "")
     ]
 

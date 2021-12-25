@@ -117,7 +117,7 @@
                                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ne9-ts-2bc" userLabel="info">
                                                                             <rect key="frame" x="0.0" y="207" width="372" height="72"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oaP-w5-vpk" userLabel="Icon">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oaP-w5-vpk" userLabel="Icon">
                                                                                     <rect key="frame" x="324" y="24" width="24" height="24"/>
                                                                                     <color key="backgroundColor" red="0.73469716490000003" green="0.390085236" blue="0.26859479390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                     <constraints>
