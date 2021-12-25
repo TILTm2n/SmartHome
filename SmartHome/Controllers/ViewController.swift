@@ -14,8 +14,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var mainCamerasTitle: UILabel!
     
     var camViews: [CameraView] = [
-        CameraView(cameraView: "sunrise", icon: "sunrise", title: "Title", detail: "detail"),
-        CameraView(cameraView: "sunrise", icon: "sunrise", title: "Title", detail: "detail")
+        CameraView(cameraView: "", icon: "sunrise", title: "Title", detail: "detail"),
+        CameraView(cameraView: "sunrise", icon: "", title: "Title", detail: "")
     ]
 
     
@@ -36,13 +36,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if !camViews[indexPath.row].icon!.isEmpty{
             cell.iconCamera.image = UIImage(named: camViews[indexPath.row].icon!)
         }else{
-            cell.imageCamera.isHidden = true
+            cell.iconCamera.isHidden = true
         }
         
         if !camViews[indexPath.row].title!.isEmpty{
             cell.title.text = camViews[indexPath.row].title
         }else{
-            cell.detail.isHidden = true
+            cell.title.isHidden = true
         }
         
         if !camViews[indexPath.row].detail!.isEmpty{
