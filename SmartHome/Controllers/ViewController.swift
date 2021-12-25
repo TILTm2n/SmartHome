@@ -11,41 +11,69 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var CameraButton: UIButton!
     @IBOutlet weak var DoorsButton: UIButton!
+    @IBOutlet weak var mainCamerasTitle: UILabel!
     
     var camViews: [CameraView] = [
-        CameraView(cameraView: UIImage(named: "sunset")!, icon: UIImage(named: "sunset")!, title: "Title", detail: "detail")
+        CameraView(cameraView: "sunrise", icon: "sunrise", title: "Title", detail: "detail"),
+        CameraView(cameraView: "sunrise", icon: "sunrise", title: "Title", detail: "detail")
     ]
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return camViews.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstTypeCell", for: indexPath) as! FirstTypeTableViewCell
         
-        cell.imageCamera.image = camViews[indexPath.row].cameraView
-        cell.title.text = camViews[indexPath.row].title
-        cell.detail.text = camViews[indexPath.row].detail
-        cell.iconCamera.image = camViews[indexPath.row].icon
+        
+        if !camViews[indexPath.row].cameraView!.isEmpty{
+            cell.imageCamera.image = UIImage(named: camViews[indexPath.row].cameraView!)
+        }else{
+            cell.imageCamera.isHidden = true
+        }
+        
+        if !camViews[indexPath.row].icon!.isEmpty{
+            cell.iconCamera.image = UIImage(named: camViews[indexPath.row].icon!)
+        }else{
+            cell.imageCamera.isHidden = true
+        }
+        
+        if !camViews[indexPath.row].title!.isEmpty{
+            cell.title.text = camViews[indexPath.row].title
+        }else{
+            cell.detail.isHidden = true
+        }
+        
+        if !camViews[indexPath.row].detail!.isEmpty{
+            cell.detail.text = camViews[indexPath.row].detail
+        }else{
+            cell.detail.isHidden = true
+        }
+        
+        cell.selectionStyle = .none
         
         return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        1
+        return 1
     }
     
     var currentButton = 1
     
     @IBAction func CamButtonAction(_ sender: Any) {
         currentButton = 1
+        mainCamerasTitle.isHidden = false
         changeCurrentWindow()
     }
     @IBAction func DoorButtonAction(_ sender: Any) {
         currentButton = 2
+        mainCamerasTitle.isHidden = true
         changeCurrentWindow()
     }
     
+    //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         CameraButton.addBorder(side: .Bottom, color: UIColor.init(named: "borderColor")!, width: 2)

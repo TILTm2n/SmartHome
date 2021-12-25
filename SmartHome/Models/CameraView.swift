@@ -9,9 +9,10 @@ import Foundation
 import UIKit
 
 struct CameraView{
-    var cameraView: UIImage
-    var icon: UIImage
-    var title: String
-    var detail: String
+    
+    var cameraView: String?
+    var icon: String?
+    var title: String?
+    var detail: String?
 }
 

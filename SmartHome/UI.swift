@@ -17,7 +17,7 @@ import UIKit
         }
         set{
             self.layer.cornerRadius = newValue
-            self.layer.masksToBounds = newValue > borderRadius
+            //self.layer.masksToBounds = newValue > borderRadius - все руинит
         }
     }
     
