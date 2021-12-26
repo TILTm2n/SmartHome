@@ -44,58 +44,40 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstTypeCell", for: indexPath) as! FirstTypeTableViewCell
         
         if currentWindow == 1{
-            if !camViews[indexPath.row].cameraView!.isEmpty{
-                cell.imageCamera.image = UIImage(named: camViews[indexPath.row].cameraView!)
-            }else{
-                cell.imageCamera.isHidden = true
-            }
-            
-            if !camViews[indexPath.row].icon!.isEmpty{
-                cell.iconCamera.image = UIImage(named: camViews[indexPath.row].icon!)
-            }else{
-                cell.iconCamera.isHidden = true
-            }
-            
-            if !camViews[indexPath.row].title!.isEmpty{
-                cell.title.text = camViews[indexPath.row].title
-            }else{
-                cell.title.isHidden = true
-            }
-            
-            if !camViews[indexPath.row].detail!.isEmpty{
-                cell.detail.text = camViews[indexPath.row].detail
-            }else{
-                cell.detail.isHidden = true
-            }
+            setCellStyle(cell, camViews, indexPath)
         }else if currentWindow == 2{
-            if !doorWindow[indexPath.row].cameraView!.isEmpty{
-                cell.imageCamera.image = UIImage(named: doorWindow[indexPath.row].cameraView!)
-            }else{
-                cell.imageCamera.isHidden = true
-            }
-            
-            if !doorWindow[indexPath.row].icon!.isEmpty{
-                cell.iconCamera.image = UIImage(named: doorWindow[indexPath.row].icon!)
-            }else{
-                cell.iconCamera.isHidden = true
-            }
-            
-            if !doorWindow[indexPath.row].title!.isEmpty{
-                cell.title.text = doorWindow[indexPath.row].title
-            }else{
-                cell.title.isHidden = true
-            }
-            
-            if !doorWindow[indexPath.row].detail!.isEmpty{
-                cell.detail.text = doorWindow[indexPath.row].detail
-            }else{
-                cell.detail.isHidden = true
-            }
+            setCellStyle(cell, doorWindow, indexPath)
         }
         
         cell.selectionStyle = .none
         
         return cell
+    }
+    
+    func setCellStyle(_ cell: FirstTypeTableViewCell, _ dataModel: [CameraView], _ indexPath: IndexPath){
+        if !dataModel[indexPath.row].cameraView!.isEmpty{
+            cell.imageCamera.image = UIImage(named: dataModel[indexPath.row].cameraView!)
+        }else{
+            cell.imageCamera.isHidden = true
+        }
+        
+        if !dataModel[indexPath.row].icon!.isEmpty{
+            cell.iconCamera.image = UIImage(named: dataModel[indexPath.row].icon!)
+        }else{
+            cell.iconCamera.isHidden = true
+        }
+        
+        if !dataModel[indexPath.row].title!.isEmpty{
+            cell.title.text = dataModel[indexPath.row].title
+        }else{
+            cell.title.isHidden = true
+        }
+        
+        if !dataModel[indexPath.row].detail!.isEmpty{
+            cell.detail.text = dataModel[indexPath.row].detail
+        }else{
+            cell.detail.isHidden = true
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

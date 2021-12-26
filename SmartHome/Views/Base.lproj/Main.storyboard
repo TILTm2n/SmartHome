@@ -102,14 +102,14 @@
                                         <color key="sectionIndexBackgroundColor" name="mainBG"/>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="firstTypeCell" id="eLh-Ps-cb6" customClass="FirstTypeTableViewCell" customModule="SmartHome" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="372" height="311"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="372" height="299"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eLh-Ps-cb6" id="N1z-YW-H2O">
-                                                    <rect key="frame" x="0.0" y="0.0" width="372" height="311"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="372" height="299"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLE-fC-UrB" userLabel="CameraShow">
-                                                            <rect key="frame" x="0.0" y="16" width="372" height="279"/>
+                                                            <rect key="frame" x="0.0" y="10" width="372" height="279"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wIq-Lo-aKB" userLabel="MainContent">
                                                                     <rect key="frame" x="0.0" y="0.0" width="372" height="279"/>
@@ -192,10 +192,10 @@
                                                         </view>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="FLE-fC-UrB" firstAttribute="top" secondItem="N1z-YW-H2O" secondAttribute="top" constant="10" id="KNm-0e-ouN"/>
                                                         <constraint firstItem="FLE-fC-UrB" firstAttribute="leading" secondItem="N1z-YW-H2O" secondAttribute="leading" id="PFb-EO-ZF4"/>
                                                         <constraint firstAttribute="trailing" secondItem="FLE-fC-UrB" secondAttribute="trailing" id="XVs-6J-Dia"/>
-                                                        <constraint firstAttribute="bottom" secondItem="FLE-fC-UrB" secondAttribute="bottom" constant="16" id="a6y-17-bcD"/>
-                                                        <constraint firstItem="FLE-fC-UrB" firstAttribute="top" secondItem="N1z-YW-H2O" secondAttribute="top" constant="16" id="tWg-0D-vqg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="FLE-fC-UrB" secondAttribute="bottom" constant="10" id="lpY-Ge-Blb"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
