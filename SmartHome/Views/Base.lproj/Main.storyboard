@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -47,7 +46,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="mainBG"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="0oh-9F-aKr" secondAttribute="bottom" id="Q8O-Kg-yBg"/>
                                             <constraint firstItem="0oh-9F-aKr" firstAttribute="leading" secondItem="JBL-Qs-gaq" secondAttribute="leading" id="aBJ-nx-wYb"/>
@@ -77,7 +76,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="mainBG"/>
                                         <constraints>
                                             <constraint firstItem="bCk-zc-CjV" firstAttribute="leading" secondItem="otZ-wr-UNp" secondAttribute="leading" id="BLc-EY-09u"/>
                                             <constraint firstAttribute="trailing" secondItem="bCk-zc-CjV" secondAttribute="trailing" id="UTv-l1-aDa"/>
@@ -86,6 +85,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="mainBG"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Fhu-zN-LyP" userLabel="ContentStack">
                                 <rect key="frame" x="21" y="166" width="372" height="715"/>
@@ -96,7 +96,7 @@
                                         <color key="textColor" name="MainText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bH7-wN-xGP" userLabel="MainTableView">
+                                    <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bH7-wN-xGP" userLabel="MainTableView">
                                         <rect key="frame" x="0.0" y="37" width="372" height="678"/>
                                         <color key="backgroundColor" name="mainBG"/>
                                         <color key="sectionIndexBackgroundColor" name="mainBG"/>
@@ -255,6 +255,7 @@
                         <outlet property="CameraButton" destination="0oh-9F-aKr" id="J0L-CA-DCw"/>
                         <outlet property="DoorsButton" destination="bCk-zc-CjV" id="uH7-zv-SH4"/>
                         <outlet property="mainCamerasTitle" destination="FDk-M7-CDS" id="qfm-iG-1iY"/>
+                        <outlet property="mainTableView" destination="bH7-wN-xGP" id="9at-Wj-yYj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -269,8 +270,5 @@
         <namedColor name="mainBG">
             <color red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
