@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -93,9 +94,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let edit = UIContextualAction(style: .destructive, title: "Edit") { (contextualAction, view, actionPerformed: (Bool) -> ()) in
-            print("hello")
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed: (Bool) -> ()) in
+            print("edited")
         }
+        
+        edit.image = UIImage(named: "icon")
+        
+        
+//        let deleted = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: (Bool) -> ()) in
+//            print("deleted")
+//        }
         
         return UISwipeActionsConfiguration(actions: [edit])
     }
