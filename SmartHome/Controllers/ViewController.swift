@@ -98,15 +98,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             print("edited")
         }
         
-        //edit.backgroundColor = UIColor.white
-        edit.image = UIImage(named: "editIcon")
+        let rate = UIContextualAction(style: .normal, title: nil) { (contextualAction, view, actionPerformed: (Bool) -> ()) in
+            print("rated")
+        }
+        
+        edit.image = UIImage(named: "edit")
+        edit.backgroundColor = UIColor(named: "mainBG")
+        
+        rate.image = UIImage(named: "star")
+        rate.backgroundColor = UIColor(named: "mainBG")
         
         
-//        let deleted = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: (Bool) -> ()) in
-//            print("deleted")
-//        }
         
-        return UISwipeActionsConfiguration(actions: [edit])
+        return UISwipeActionsConfiguration(actions: [rate,edit])
     }
     
 
