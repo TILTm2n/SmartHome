@@ -99,7 +99,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         edit.image = UIImage(named: "icon")
-        
+        edit.backgroundColor = UIColor.white
         
 //        let deleted = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: (Bool) -> ()) in
 //            print("deleted")
