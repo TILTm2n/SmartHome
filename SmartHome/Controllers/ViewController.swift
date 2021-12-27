@@ -14,8 +14,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var DoorsButton: UIButton!
     @IBOutlet weak var mainTableView: UITableView!
     
-    var currentWindow = 1
-    
     var camViews: [CameraView] = [
         CameraView(cameraView: "sunrise", icon: "", title: "Title", detail: ""),
         CameraView(cameraView: "sunrise", icon: "", title: "Title", detail: ""),
@@ -34,6 +32,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         CameraView(cameraView: "sunrise", icon: "lock", title: "Домофон", detail: "В сети")
     ]
 
+    var currentWindow = 1
+    
+    lazy var headerForTable: UIView = {
+        let header = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        label.text = "Гостинная"
+        label.font = .systemFont(ofSize: 21, weight: .light)
+        
+        header.addSubview(label)
+        return header
+    }()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -113,16 +122,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         CameraButton.addBorder(side: .Bottom, color: UIColor.init(named: "borderColor")!, width: 2)
         mainTableView.tableHeaderView = headerForTable
     }
-    
-    lazy var headerForTable: UIView = {
-        let header = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
-        label.text = "Гостинная"
-        label.font = .systemFont(ofSize: 21, weight: .light)
-        
-        header.addSubview(label)
-        return header
-    }()
     
     func changeCurrentWindow(){
         if (currentWindow == 1){
