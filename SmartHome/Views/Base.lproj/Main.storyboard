@@ -25,7 +25,7 @@
                                 <color key="textColor" name="MainText"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wxa-yG-EbG" userLabel="ButtonStack">
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wxa-yG-EbG" userLabel="ButtonStack">
                                 <rect key="frame" x="0.0" y="106" width="414" height="44"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBL-Qs-gaq">
@@ -90,14 +90,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Fhu-zN-LyP" userLabel="ContentStack">
                                 <rect key="frame" x="21" y="166" width="372" height="715"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Гостинная" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDk-M7-CDS">
-                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="25"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                                        <color key="textColor" name="MainText"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bH7-wN-xGP" userLabel="MainTableView">
-                                        <rect key="frame" x="0.0" y="37" width="372" height="678"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="372" height="715"/>
                                         <color key="backgroundColor" name="mainBG"/>
                                         <color key="sectionIndexBackgroundColor" name="mainBG"/>
                                         <prototypes>
@@ -126,7 +120,7 @@
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oaP-w5-vpk" userLabel="Icon">
                                                                                     <rect key="frame" x="324" y="24" width="24" height="24"/>
-                                                                                    <color key="backgroundColor" red="0.73469716490000003" green="0.390085236" blue="0.26859479390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="24" id="0RY-JV-b50"/>
                                                                                         <constraint firstAttribute="height" constant="24" id="5Pc-28-ryh"/>
@@ -234,6 +228,7 @@
                                     <constraint firstItem="bH7-wN-xGP" firstAttribute="leading" secondItem="Fhu-zN-LyP" secondAttribute="leading" id="bwa-ON-nO2"/>
                                     <constraint firstAttribute="trailing" secondItem="bH7-wN-xGP" secondAttribute="trailing" id="fsB-lW-yed"/>
                                     <constraint firstAttribute="bottom" secondItem="bH7-wN-xGP" secondAttribute="bottom" id="oK2-1h-Yix"/>
+                                    <constraint firstItem="bH7-wN-xGP" firstAttribute="top" secondItem="Fhu-zN-LyP" secondAttribute="top" id="qKW-Bg-nuH"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -254,7 +249,6 @@
                     <connections>
                         <outlet property="CameraButton" destination="0oh-9F-aKr" id="J0L-CA-DCw"/>
                         <outlet property="DoorsButton" destination="bCk-zc-CjV" id="uH7-zv-SH4"/>
-                        <outlet property="mainCamerasTitle" destination="FDk-M7-CDS" id="qfm-iG-1iY"/>
                         <outlet property="mainTableView" destination="bH7-wN-xGP" id="9at-Wj-yYj"/>
                     </connections>
                 </viewController>

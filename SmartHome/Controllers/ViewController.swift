@@ -12,7 +12,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var CameraButton: UIButton!
     @IBOutlet weak var DoorsButton: UIButton!
-    @IBOutlet weak var mainCamerasTitle: UILabel!
     @IBOutlet weak var mainTableView: UITableView!
     
     var currentWindow = 1
@@ -23,6 +22,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     ]
     
     var doorWindow: [CameraView] = [
+        CameraView(cameraView: "", icon: "lock", title: "Подъезд 1", detail: ""),
+        CameraView(cameraView: "", icon: "lock", title: "Выход на пожарную лестницу", detail: ""),
+        CameraView(cameraView: "", icon: "lock", title: "Подъезд 2", detail: ""),
+        CameraView(cameraView: "sunrise", icon: "lock", title: "Домофон", detail: "В сети"),
         CameraView(cameraView: "", icon: "lock", title: "Подъезд 1", detail: ""),
         CameraView(cameraView: "", icon: "lock", title: "Выход на пожарную лестницу", detail: ""),
         CameraView(cameraView: "", icon: "lock", title: "Подъезд 2", detail: ""),
@@ -57,15 +60,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func setCellStyle(_ cell: FirstTypeTableViewCell, _ dataModel: [CameraView], _ indexPath: IndexPath){
         if !dataModel[indexPath.row].cameraView!.isEmpty{
             cell.imageCamera.image = UIImage(named: dataModel[indexPath.row].cameraView!)
+            cell.imageCamera.isHidden = false
         }else{
             cell.imageCamera.isHidden = true
         }
         
         if !dataModel[indexPath.row].icon!.isEmpty{
             cell.iconCamera.image = UIImage(named: dataModel[indexPath.row].icon!)
+            cell.iconCamera.isHidden = false
         }else{
             cell.iconCamera.isHidden = true
         }
+        
         
         if !dataModel[indexPath.row].title!.isEmpty{
             cell.title.text = dataModel[indexPath.row].title
@@ -85,31 +91,49 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func CamButtonAction(_ sender: Any) {
-        currentWindow = 1
-        mainCamerasTitle.isHidden = false
-        changeCurrentWindow()
+        if currentWindow != 1{
+            currentWindow = 1
+            changeCurrentWindow()
+            //mainTableView.tableHeaderView?.isHidden = false
+        }
     }
     @IBAction func DoorButtonAction(_ sender: Any) {
-        currentWindow = 2
-        mainCamerasTitle.isHidden = true
-        changeCurrentWindow()
+        if currentWindow != 2{
+            currentWindow = 2
+            changeCurrentWindow()
+            mainTableView.tableHeaderView = nil
+        }
+        
     }
     
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         CameraButton.addBorder(side: .Bottom, color: UIColor.init(named: "borderColor")!, width: 2)
+        mainTableView.tableHeaderView = headerForTable()
+    }
+    
+    func headerForTable()->UIView?{
+        let header = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        label.text = "Гостинная"
+        label.font = .systemFont(ofSize: 21, weight: .light)
+        
+        header.addSubview(label)
+        return header
     }
     
     func changeCurrentWindow(){
         if (currentWindow == 1){
             CameraButton.addBorder(side: .Bottom, color: UIColor.init(named: "borderColor")!, width: 2)
             DoorsButton.removeBorder()
+            mainTableView.tableHeaderView = headerForTable()
         }
             
         if (currentWindow == 2){
             DoorsButton.addBorder(side: .Bottom, color: UIColor.init(named: "borderColor")!, width: 2)
             CameraButton.removeBorder()
+            mainTableView.tableHeaderView = nil
         }
         
         mainTableView.reloadData()
