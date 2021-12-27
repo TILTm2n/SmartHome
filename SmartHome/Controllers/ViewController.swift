@@ -18,6 +18,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var camViews: [CameraView] = [
         CameraView(cameraView: "sunrise", icon: "", title: "Title", detail: ""),
+        CameraView(cameraView: "sunrise", icon: "", title: "Title", detail: ""),
+        CameraView(cameraView: "sunrise", icon: "", title: "Title", detail: ""),
         CameraView(cameraView: "sunrise", icon: "", title: "Title", detail: "")
     ]
     
