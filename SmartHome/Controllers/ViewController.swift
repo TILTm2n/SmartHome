@@ -103,7 +103,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if currentWindow != 2{
             currentWindow = 2
             changeCurrentWindow()
-            mainTableView.tableHeaderView = nil
         }
         
     }
@@ -112,10 +111,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         CameraButton.addBorder(side: .Bottom, color: UIColor.init(named: "borderColor")!, width: 2)
-        mainTableView.tableHeaderView = headerForTable()
+        mainTableView.tableHeaderView = headerForTable
     }
     
-    func headerForTable()->UIView?{
+    lazy var headerForTable: UIView = {
         let header = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         label.text = "Гостинная"
@@ -123,13 +122,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         header.addSubview(label)
         return header
-    }
+    }()
     
     func changeCurrentWindow(){
         if (currentWindow == 1){
             CameraButton.addBorder(side: .Bottom, color: UIColor.init(named: "borderColor")!, width: 2)
             DoorsButton.removeBorder()
-            mainTableView.tableHeaderView = headerForTable()
+            mainTableView.tableHeaderView = headerForTable
         }
             
         if (currentWindow == 2){
