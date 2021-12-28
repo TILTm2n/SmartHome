@@ -44,6 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return header
     }()
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if currentWindow == 1{
